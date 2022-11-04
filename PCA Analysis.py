@@ -3,7 +3,8 @@ import numpy as np
 from scipy import stats
 import statsmodels.api as sm
 
-crypto = pd.read_excel('./Data.xlsx', 'Crypto', index_col=0)  # Step1
+# Reading data from Data.xlsx
+crypto = pd.read_excel('./Data.xlsx', 'Crypto', index_col=0)
 factor = pd.read_excel('./Data.xlsx', 'Factor', index_col=0)
 crypto_ret = np.array(np.log(crypto / crypto.shift()).dropna(how='all'))  # Log return
 fact_ret = np.array(np.log(factor / factor.shift()).dropna(how='all'))
