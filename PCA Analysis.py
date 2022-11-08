@@ -9,7 +9,7 @@ factor = pd.read_excel('./Data.xlsx', 'Factor', index_col=0)
 crypto_ret = np.array(np.log(crypto / crypto.shift()).dropna(how='all'))  # Log return
 fact_ret = np.array(np.log(factor / factor.shift()).dropna(how='all'))
 
-reqExp = 0.9  # Rrequired explanatory power
+reqExp = 0.9  # Required explanatory power
 reqCorr = 0.2  # Required minimum correlation for the factor with the eigen portfolio
 reqFcorr = 0.7  # Maximum allowed between-factor correlation
 
